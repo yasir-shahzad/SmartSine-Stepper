@@ -1,0 +1,1 @@
+We are currently focusing on the NEMA23 driver until the code is completed. Once finalized, we will develop the hardware version for the NEMA17 as well.
