@@ -113,98 +113,6 @@ If you'd like to contribute and help bring more exciting projects to life, consi
 </div>
 
 
-
-
-## Schematic Diagram 📉  
-The complete schematic diagram shows the electrical connections and components used in the design.  
-![alt SIM800C Schematic Diagram](images/SIM800C-schematic.png)
-
-## PCB Layout 🖼️  
-The PCB layout represents the physical arrangement of components on the printed circuit board, detailing how they are positioned and connected.  
-![alt SIM800C PCB Layout](images/SIM800C-PCB.png)
-
-
-## Features 🌟
-
-- **Power Supply via USB or External 5V** 🔌 for flexible power options.
-- **Quad-Band GSM/GPRS Module** 📶 supporting 850/900/1800/1900 MHz bands for global connectivity.
-- **AT Command Interface** 💻 for easy communication with microcontrollers and computers.
-- **TCP/IP, HTTP, FTP Protocols** 🌐 for versatile data communication over the internet.
-- **SMS and Voice Call Support** 📞 for messaging and voice applications.
-- **Onboard 5V to 3.3V Regulator** 🔋 ensuring stable power for the module.
-- **Antenna Connector** 📡 for extended network range.
-- **Power Saving Mode** ⚡ to reduce power consumption during idle periods.
-- **I2C, UART, and SPI Interfaces** 🔗 for seamless communication with other devices.
-- **Status Indicators** 💡 for network and power statuses.
-- **Compact Form Factor** 📏 ideal for embedded and IoT projects.
-
-
-
-
-## Requirements 📋
-
-- 🛠️ **Altium Designer** (or a compatible viewer)
-
-## Images 📸
-
-<table>
-  <tr>
-    <th>
-        <a href="images/Top3D.png" target="_blank">
-        <img src='images/Top3D.png' width='200px' alt='Top 3D View' /> </a>  
-        <p>🔼 Top 3D View</p>
-    </th>
-    <th>
-        <a href="images/Bottom3D.png" target="_blank">
-        <img src='images/Bottom3D.png' width='200px' alt='Bottom 3D View' /> </a>
-        <p>🔽 Bottom 3D View</p>
-    </th>
-    <th>
-        <a href="images/Top_Layout.png" target="_blank">
-        <img src='images/Top_Layout.png' width='200px' alt='Top Layout' /> </a>
-        <p>🔼 Top Layout</p>
-    </th>
-    <th>
-        <a href="images/Bottom_Layout.png" target="_blank">
-        <img src='images/Bottom_Layout.png' width='200px' alt='Bottom Layout' /> </a>
-        <p>🔽 Bottom Layout</p>
-    </th>
-  </tr>
-</table>
-
-## Getting Started 🚀
-
-1. **Download the repository**: 🟢 Click "Clone or download" on the green button above.
-2. **Open the project**: 🖥️ Use Altium Designer to open the `.PrjPCB` file located in the main directory.
-3. **Schematics**: 📜 The `schematic.SchDoc` file shows the electrical connections and components used in the design.
-4. **PCB layout**: 🧩 The `PCB.PCBDoc` file represents the physical layout of the components on the printed circuit board.
-5. **Generate BOM (optional)**: 🛒 Use Altium Designer's BOM generation features to create a list of required components.
-
-## Additional Information ℹ️
-
-- **Firmware**: This repository does not include firmware. A separate repository is available with HTTPS, MQTT, and additional features. You can find it here:[SIM800C Firmware](https://github.com/yasir-shahzad/SIMCom-GSM)
-- **Assembly instructions (optional)**: 🔧 Consider adding a separate document or webpage with detailed instructions on soldering and assembling the PCB (if applicable).
-- **License**: 📄 Specify the open-source license used for the design files (e.g., MIT License).
-
-## Contributing 🤝
-
-We encourage contributions to this project! Feel free to submit pull requests with improvements, bug fixes, or additional features.
-
-## Thanks to all contributors ❤️
-
- <a href="https://github.com/yasir-shahzad/SmartSine-Stepper/graphs/contributors">
-   <img src="https://contrib.rocks/image?repo=yasir-shahzad/SmartSine-Stepper" />
- </a>
-
-# SmartSine-Stepper
-Firmware to turn a stepper motor into servo motor: see http://xyz.com for hardware! 
-
-If you have a MKS Servo42D or MKS Servo57D, this firmware is not fully tested. Test submissions are appreciated. __Test at you own RISK!__
-
-If you want to support the work on the firmware and hardware consider buying hardware from www.xyz.com or buying me a beer using the donation button. 
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4JAEK4G24W2U4)
-
 # How to Install 
 
 # Google groups forum
@@ -388,11 +296,13 @@ Displays the number of steps that have been seen from the DIR pin.
 ### debug
 Sets if syslog debugging will be output on USB serial. Allowed values are 0 for disable, 1 for enable.
 
+## Contributing 🤝
 
+We encourage contributions to this project! Feel free to submit pull requests with improvements, bug fixes, or additional features.
 
-## License:
-The smart stepper related hardware is released under the Creative Commons Attribution Share-Alike 4.0 License as much of the work is based 
+## Thanks to all contributors ❤️
 
+ <a href="https://github.com/yasir-shahzad/SmartSine-Stepper/graphs/contributors">
+   <img src="https://contrib.rocks/image?repo=yasir-shahzad/SmartSine-Stepper" />
+ </a>
 
- 
-The firmware is licensed as GPL V3 for non-commercial use. If you want to release a closed source version of this product, please contact MisfitTech.net for licensing details.
