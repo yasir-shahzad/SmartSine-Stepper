@@ -209,6 +209,59 @@ Displays the number of steps that have been seen from the DIR pin.
 ### debug
 Sets if syslog debugging will be output on USB serial. Allowed values are 0 for disable, 1 for enable.
 
+
+
+### description 
+20210712 Motor hardware and software update: 57 motor driver chip is changed to the latest research and development of large current SS6952A, the two channels are merged into one channel, driving current is larger, driving capacity is stronger, so that 1 drive 57 motor when the margin is larger, can take a larger motor, is not easy to overheat. The program remains compatible with the previous version, 42 motor circuit remains unchanged, still using SS6951A driver.
+
+ 
+
+20210517 Motor hardware and software update: modify and optimize the circuit diagram of SS6951A driver chip. 1. Improve the current sampling accuracy of driver chip, so as to reduce vibration and noise; In deep cooperation with McGwan Company, a low cost encoder chip was independently tested for the driver chip of our company, which further improved the vibration and noise of the motor at low speed!
+
+ 
+
+20210230 Motor hardware and software update: in view of the driver chip price skyrocketing and serious shortage of hardware, the driver chip will be changed to the owner company independent self-developed chip, model SS6951A. The internal resistance is only 0.3 euro, half of the original Toshiba 450 chip, the heat is reduced by half, and the maximum driving current reaches 4A; In addition, the internal structure circuit of the chip is optimized for the depth of closed-loop stepping application. The noise and vibration are reduced by about 1/3 compared with before, and the torque and response are improved by about 1/3. Adopt better heat dissipation large package, chip thickness is only 1mm, more conducive to heat sink; If you need a free sample, contact the store owner. In order to alleviate the impact of the shortage of single chip microcomputer, the software has been modified to be compatible with The "N к32" and THE "STM32" models.
+
+ 
+
+20190917 update of motor hardware and software: the software has changed only a few parameters to improve the stability, and added Chinese annotations to facilitate learning and understanding. The hardware added anti-reverse diode, model SL54, the original row pin seat changed to a more beautiful and lower height of XH2.54 seat, in addition to the serial port and the burning port into one, convenient to use STLINKV2.1 direct burning and serial port communication.
+
+ 
+Hardware and software update: the hardware circuit board will be optocoupler input side copper hollow to prevent interference, the sensor is changed to the bottom welding, the circuit board design needs to use nylon washer and motor separated by about 2mm to prevent interference; In terms of software, all floating point number variables are changed to fixed-point variables, and the program is rewritten to adapt to fixed-point variables, the amount of calculation of SCM is greatly reduced, CPU still has about 3/5 free time can be used for the secondary development of other functions. The update frequency of the position ring is increased from 5KHZ to 10KHZ, and the control performance is strengthened. The 42 maximum speed is raised to about 1200RPM, while the 57 maximum speed is raised to about 1000RPM. Part of the timer processing STEP/DIR signal is optimized so that even high speed pulses of several hundred K or even M can be easily handled without losing the pulse. Overloading the fputc () and fgetc () functions in stdio.h header file, the program can now use printf () and scanf () and other standard input and output functions to write RS232 and RS485 protocols, in addition to a simple ASCII protocol as a reference.
+
+ 
+
+Latest update: the hardware circuit board has been replaced with a new LDO model RS3005, which completely solves the problem of overheat shutdown of the regulator chip. In addition, the input signal CLK is changed from the original external interrupt pin to the external counting input pin of timer TIM1, and the circuit board is changed to support both STM32F103 and STM32F030 microcontroller. The processing of the original CLK signal on the software is changed from external interrupts to timer counting, so it does not need to consume a lot of processor resources. The original use of interrupts to process the CLK signal will consume a lot of processing time, which will also cause the program to measure the speed of the motor incorrectly. In the case of 32 subdivision, as long as the motor speed runs to 1000RPM, the program may crash, and it is almost impossible to use a high subdivision such as 128/256
+
+The integration of the closed loop stepper motor is the owner of new research and development, not take somebody else's foreign open source project shanzhai copying directly to cheat the little white, buy motor comes with a full range of hardware and software, including source code program, 42 step and 57 stepper schematic and PCB, can buy to return their sheet copy, can also be secondary development, the shop owner will not be updated regularly and fix the BUG of software and hardware, and can provide the code level technical support.
+
+ 
+The hardware and software performance of the motor has been greatly improved. The hardware cost is less than half of that of MECHADUINO and its counterfeit products in foreign countries. The maximum driving current can reach 3.5a, which is twice as high as that of foreign versions. According to the industrial standard design, high speed isolation optical coupling, software watchdog, reliability optimization. Open loop closed-loop mode with optional switch, subdivision selection, encoder correction all dial switch one key to complete, no need to connect the upper computer secondary programming!
+
+ 
+
+ 
+
+Closed-loop stepping parameters:
+ 
+Main control chip: hangshun HK32F030C8T6
+ 
+Drive chip: two Toshiba TB67H450 (maximum current 3.5a)
+ 
+Encoder chip: 15 infineon auto industry grade TLE5012B
+ 
+High speed optocoupler: Toshiba dual channel TLP2168
+ 
+Working voltage: 12-30v (recommended 24V)
+ 
+Working current: rated 1.3a (42 steps) 2.5a (57 steps) maximum 3.5a
+ 
+Control accuracy: less than 0.08 degrees
+
+
+
+
+
 ## Contributing 🤝
 
 We encourage contributions to this project! Feel free to submit pull requests with improvements, bug fixes, or additional features.
